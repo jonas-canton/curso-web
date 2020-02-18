@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <!--<style>
+        * { /* Seletor Universal */
+            color: #ff0;
+            background-color: #f77;
+        }
+
+        .tag { /* Seletor de classe */
+            color: #ff0;
+            background-color: #f77;
+        }
+
+        #aprovados { /* Seletor de ID */
+            color: #ff0;
+            background-color: #f77;
+        }
+
+        #aninhado > div { /* Pega os filhos diretos de '#aninhado' que sejam 'div' */
+            color: #ff0;
+            background-color: #f77;
+        }
+
+        #aninhado section { /* Pega o descendente de 'aninhado' do tipo 'section' independente de ser direto ou não */
+            color: #ff0;
+            background-color: #f77;
+        }
+
+        p + ul { /* Seletor Sibling adjacente, pega o segundo elemento que está logo após o primeiro */
+            color: #ff0;
+            background-color: #f77;
+        }
+
+        p ~ ol { /* Seletor Sibling, pega o segundo elemento que não necessariamente está logo após o primeiro */
+            color: #ff0;
+            background-color: #f77;
+        }
+
+        [feira] { /* Seletor de Atributo, procura todos os elementos que possuem aquela propriedade */
+            color: #ff0;
+            background-color: #f77;
+        }
+
+        [feira=casa] { /* Seletor de Atributo, procura todos os elementos que possuem aquela propriedade com aquele valor exato */
+            color: #ff0;
+            background-color: #f77;
+        }
+
+        [feira~=casa] { /* Seletor de Atributo, procura todos os elementos que possuem aquela propriedade com aquele valor */
+            color: #ff0;
+            background-color: #f77;
+        }
+
+        [feira*=casa] { /* Seletor de Atributo, procura todos os elementos que possuem aquela propriedade cujo valor contenha aquela sentença */
+            color: #ff0;
+            background-color: #f77;
+        }
+
+        span:nth-child(1) { /* Seletor de Filho, pega o 'span' que seja o primeiro filho de alguém (testar com 'nolabel')  */
+            color: #ff0;
+            background-color: #f77;
+        }
+
+        section > :nth-child(odd) { /* Seletor de Filho, pega todos os filhos ímpares dentro de uma 'section' */
+            color: #ff0;
+            background-color: #f77;
+        }
+
+        section > :nth-child(even) { /* Seletor de Filho, pega todos os filhos pares dentro de uma 'section' */
+            color: #ff0;
+            background-color: #f77;
+        }
+
+        section > :nth-child(even), ul { /* Seletor de Filho, pega todos os filhos pares dentro de uma section e também aplica para 'ul' */
+            color: #ff0;
+            background-color: #f77;
+        }
+
+        section > span:nth-of-type(2) { /* Seletor de Filho, pega o segundo 'span' da 'section' */
+            color: #ff0;
+            background-color: #f77;
+        }
+    </style>-->
+    <style>
+        /* Testar um por um aqui... */
+    </style>
+</head>
+
+<body>
+    <div class='tag'>
+        <div class='tag'>
+            <p class='tag'>1</p>
+            <ul class='tag' feira='casa'>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+            <ul class='tag' feira='escritorio empresa'>
+                <li>Café</li>
+                <li>Água</li>
+            </ul>
+            <ol id='aprovados' class='tag'>
+                <li>Maria</li>
+                <li>Pedro</li>
+                <li>Ana</li>
+            </ol>
+            <div id='aninhado' class='tag'>
+                <div class="tag">
+                    <section class='tag'>
+                        <span class='tag'>1</span>
+                        <p class='tag'>2</p>
+                        <span class='tag'>3</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>
