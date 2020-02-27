@@ -94,6 +94,12 @@ Se o módulo foi instalado global, utilizar o parâmetro -g após uninstall
 
 ----------------------------------------------------------------------------------------------------------------------
 
+Sites com temas baseados em Bootstrap:
+https://wrapbootstrap.com/
+https://www.creative-tim.com/
+
+----------------------------------------------------------------------------------------------------------------------
+
 Módulo do Node.js responsável por criar uma aplicação React:
 
 npm i -g create-react-app
