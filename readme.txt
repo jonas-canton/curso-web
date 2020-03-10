@@ -1,3 +1,5 @@
+Repositório dos exercícios: github.com/cod3rcursos/web-moderno
+
 Para instalar novos módulos, executar comando no terminal:
 npm -i <nome do módulo>
 Uma pasta chamada node_modules será criada no diretório onde o comando foi executado.
