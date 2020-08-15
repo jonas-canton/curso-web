@@ -1,0 +1,26 @@
+// Para inserir um registro
+db.estados.insert({nome: "Acre", sigla: "AC", regiao: "Norte"})
+
+// Insere ou atualiza
+db.estados.save({nome: "Alagoas", sigla: "AL", regiao: "Nordeste", populacao: 3322000})
+
+// Inserir um registro "em partes"
+db.estados.insert({
+    nome: "Rio de Janeiro",
+    sigla: "RJ",
+    regiao: "Sudeste",
+    cidades: [{
+        nome: "Niterói",
+        area: 133.9,
+        populacao: 487562
+    }]
+})
+
+// Consultar registros
+db.estados.find()
+
+// Consultar formatando
+db.estados.find().pretty()
+
+// Exibir funções disponíveis
+db.help()

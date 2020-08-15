@@ -1,0 +1,16 @@
+// Usando apenas um estágio do pipeline de agregação
+db.estados.aggregate([
+    { $project: {nome: 1, "cidades.nome": 1, _id: 0} }
+])
+
+// Obs: quando usar o nome do atributo no lado direito da expressão chave-valor, deve-se usar $
+
+// Trás o somatório da população,
+// Primeiro de cada estado,
+// Depois agrupa por id = null pra resultar num somatório geral,
+// Depois tira o atributo _id
+db.estados.aggregate([
+    { $project: {populacao: {$sum: "$cidades.populacao"}, sigla: 1, _id: 0} },
+    { $group: {_id: null, populacaoTotal: {$sum: "$populacao"}} },
+    { $project: { _id: 0, populacaoTotal: 1} }
+])

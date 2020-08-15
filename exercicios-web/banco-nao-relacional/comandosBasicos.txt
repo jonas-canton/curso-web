@@ -1,0 +1,26 @@
+// Instalação via linha de comando
+sudo apt install mongodb -y
+
+// Startar o servidor do mongo
+mongod
+
+// Entrar no client do Mongo
+mongo
+
+// Sair do client do Mongo
+quit()
+
+// Mostrar todos os bancos disponíveis
+show dbs
+
+// Muda para o banco escolhido
+use <nome do banco>
+
+// Cria uma coleção (o nome é case sensitive)
+db.createCollection('estados')
+
+show collections
+
+db.<nome da collection>.drop()
+
+// Ao excluir a última coleção do banco, o próprio banco não aparece mais na lista de bancos (show dbs)

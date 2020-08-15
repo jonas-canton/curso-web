@@ -1,0 +1,10 @@
+db.estados.remove({sigla: "AC"})
+
+// Remover os estados que não possuam o atributo "populacao"
+// O parâmetro "1" vai limitar fazendo com que só remova 1 registro
+db.estados.remove({populacao: {$exists: true}}, 1)
+
+db.estados.update({sigla: "RJ"}, {$set: {populacao: 16720000}})
+
+// Remover os estados que possuam uma população menor que 20000000
+db.estados.remove({populacao: {$lt: 20000000}})

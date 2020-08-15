@@ -1,0 +1,12 @@
+db.estados.update({sigla: "SP"}, {$set: {populacao: 45340000}})
+
+// Não tendo a cidade Sergipe, ele insere esse dado, senão ele substitui todo o array de cidades
+db.estados.update({sigla: "AL"}, {$set: {cidades: [{nome: "Sergipe"}]}})
+
+db.estados.update(
+    {sigla: "SP"},
+    {$push: {cidades: {nome: "Santos", populacao: 433966}}}
+)
+
+// Buscar apenas os estados que possuam o atributo "populacao"
+db.estados.find({populacao: {$exists: true}}, {_id: 0, nome: 1})

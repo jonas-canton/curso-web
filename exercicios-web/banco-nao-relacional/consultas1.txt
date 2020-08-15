@@ -1,0 +1,30 @@
+// Pegar o primeiro registro
+db.estados.findOne()
+
+// Pegar o primeiro registro filtrando
+db.estados.findOne({sigla: "RJ"})
+
+// Pega todos registros conforme filtro
+db.estados.find({sigla: "RJ"})
+
+// Filtro com "or"
+db.estados.find({$or: [{sigla: "RJ"}, {sigla: "AC"}]}).pretty()
+
+// Trás todos os estados que tenham o atributo "populacao" presente
+db.estados.find({populacao: {$exists: true}})
+
+// Consulta paginada
+// Pula uma quantidade X de registros
+db.estados.find().skip(1)
+
+// Limita para apenas 2 registros
+db.estados.find().skip(1).limit(2)
+
+// Quantidade de registros
+db.estados.count()
+
+// Filtra o estado de SP e trás apenas os campos "nome" e "sigla"
+db.estados.find({sigla: "SP"}, {nome: 1, sigla: 1, _id: 0})
+
+// Filtra o estado de SP e trás apenas os nomes das cidades
+db.estados.find({sigla: "SP"}, {"cidades.nome": 1, _id: 0})
